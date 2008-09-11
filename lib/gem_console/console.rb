@@ -8,7 +8,7 @@ module GemConsole
   module Console
     include GemConsole
     
-    help :my_method, "Call ma metha, bro!"
+    help :my_method, "Call ma method, bro!"
     help :exit,      "Exit, bro!"
     
     def project_name

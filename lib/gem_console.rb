@@ -22,7 +22,7 @@ class ::Object
     project_name_rb = "#{project_name}.rb"
     
     # emulate __FILE__ on another level
-    __file__ = caller[-2][/^([^:]+)/]
+    __file__ = (caller.size > 1 ? caller[-2] : caller[-1])[/^([^:]+)/]
     devlib = File.expand_path(File.join(File.dirname(__file__), '..', 'lib'))
     if File.exists?(File.join(devlib, project_name_rb))
       $LOAD_PATH.unshift(devlib).uniq!
