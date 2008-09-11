@@ -1,6 +1,10 @@
 Gem console is a helper library to set up consoles in the gem-style libraries.
 
 EXAMPLE
+  
+  See bin/gem_console and lib/gem_console/console.rb for usage examples.
+
+USAGE
 
   # Your executable file:
   paris_sunshine/bin/sunshine_console:
@@ -35,8 +39,6 @@ EXAMPLE
       end
     end
 
-
-  
 META
 
   Author: Oleg Andreev <oleganza@gmail.com>
