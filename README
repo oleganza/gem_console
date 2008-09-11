@@ -1,0 +1,48 @@
+Gem console is a helper library to set up consoles in the gem-style libraries.
+
+EXAMPLE
+
+  # Your executable file:
+  paris_sunshine/bin/sunshine_console:
+  
+    #!/usr/bin/env/ruby
+    require 'rubygems'
+    require 'gem_console'
+    gem_console('myproject')
+  
+  # Your console file:
+  paris_sunshine/lib/console.rb:
+  (Note: the file *must* be named "console.rb")
+
+    module MyProject
+      module Console
+        include GemConsole
+        
+        help "my_method()\tCall ma metha, bro!"
+        help "exit()\tExit, bro!"
+        
+        def project_name
+          "MyProject 1.0"
+        end
+        
+        def setup
+          # do some initialization
+        end
+        
+        # other methods to be available in the IRB session
+        def my_method
+        end
+      end
+    end
+
+
+  
+META
+
+  Author: Oleg Andreev <oleganza@gmail.com>
+  Date: September 10, 2008
+  Place: Paris, France. 
+
+  You can distribute this library under the terms of MIT License (see the MIT-LICENSE file).
+
+Have fun.
